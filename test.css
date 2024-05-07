@@ -1,0 +1,239 @@
+/* Chat containers
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+
+#show_message {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: white;
+}
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+*/ body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  z-index: 2;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  /* position: fixed; */
+  bottom: 0;
+  right: 10px;
+  z-index: 9;
+  width: 200px;
+  max-width: 400px;
+  max-height: 550px;
+
+  position: fixed;
+  /* bottom: 200px;
+  right: 200px; */
+}
+
+/* Add styles to the form container */
+.form-container {
+  /* max-width: 500px; */
+  padding: none;
+  background-color: white;
+  max-width: 450px;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  /* padding: 16px 20px; */
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/* * {
+  font-size: 1.3vw;
+  font-family: "Epilogue", sans-serif;
+} */
+
+/* html {
+  --scrollbarBG: #fff;
+  --thumbBG: #90a4ae;
+} */
+
+/* body {
+  background: #ccc;
+} */
+.card {
+  max-height: 400px;
+  max-width: 500px;
+  width: 300px;
+  background-color: white;
+  margin-left: 30vw;
+  margin-top: 5vw;
+  box-shadow: 2vw 2vw 12vw 3vw #ccc;
+  z-index: 3;
+}
+.card #header {
+  height: 5vw;
+  background: #000;
+  padding: 0vw;
+}
+.card #header h1 {
+  color: #fff;
+  font-size: 2vw;
+  font-family: "Finger Paint", cursive;
+  padding: 1vw;
+}
+
+.card #message-section {
+  /* height: 1px; */
+  height: 270px; /* edit inside box chat */
+  padding: 0 1.5vw;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.card #message-section #bot,
+.card #message-section #user {
+  position: relative;
+  bottom: 0;
+  max-height: 3.8em;
+  min-height: 0.3em;
+  /* max-height: 1.vw; */
+  border: 0.15vw solid #777;
+  background-color: #fff;
+  border-radius: 0px 1.5vw 1.5vw 1.8vw;
+  padding: 1vw;
+  margin: 1.5vw 0;
+}
+.card #message-section #user {
+  border: 1.5px solid #000;
+  border-radius: 1.5vw 0vw 1.5vw 1.8vw;
+  background-color: #000;
+  float: right;
+}
+.card #message-section #user #user-response {
+  color: #fff;
+}
+.card #message-section .message {
+  color: #000;
+  clear: both;
+  line-height: 1.2vw;
+  font-size: 0.8em;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: 2;
+}
+.card #input-section {
+  z-index: 1;
+  /* padding: 0 2.5vw; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  max-height: 50px;
+  width: 100%;
+}
+.card #input-section input {
+  color: #000;
+  min-width: 0.5vw;
+  outline: none;
+  height: 5vw;
+  width: 26vw;
+  border: none;
+}

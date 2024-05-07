@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="test.css" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  </head>
+  <body>
+    <h2>Popup Chat Window</h2>
+    <p>Click on the button at the bottom of this page to open the chat form.</p>
+    <p>
+      Note that the button and the form is fixed - they will always be
+      positioned to the bottom of the browser window.
+    </p>
+    <p>
+      Note that the button and the form is fixed - they will always be
+      positioned to the bottom of the browser window.
+    </p>
+    <p>
+      Note that the button and the form is fixed - they will always be
+      positioned to the bottom of the browser window.
+    </p>
+    <p>
+      Note that the button and the form is fixed - they will always be
+      positioned to the bottom of the browser window.
+    </p>
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+    <body>
+      <div class="chat-popup card" id="myForm">
+        <div class="form-container">
+          <!-- <h1>Chat</h1> -->
+
+          <label id="show_message">
+            <button id="show_message" onclick="closeForm()">
+              <b>Message</b>
+            </button>
+          </label>
+
+          <div id="message-section">
+            <div class="message" id="bot">
+              <span id="bot-response">Hello.. I'm listening! Go on..</span>
+            </div>
+          </div>
+
+          <div id="input-section">
+            <input
+              id="input"
+              type="text"
+              placeholder="Type a message"
+              autocomplete="off"
+              autofocus="autofocus"
+            />
+          </div>
+          <button type="submit" class="btn" onclick="sendMessage()">
+            Send
+          </button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </div>
+      </div>
+    </body>
+
+    <script type="text/javascript" src="test.js"></script>
+  </body>
+</html>
